@@ -34,9 +34,9 @@ resource "helm_release" "harbor_instance" {
     name  = "redis.type"
     value = "external"
   }
-  
+
   set {
-    name = "redis.external.addr"
+    name  = "redis.external.addr"
     value = azurerm_redis_cache.juice.hostname
   }
 
