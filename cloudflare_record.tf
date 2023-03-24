@@ -6,4 +6,8 @@ resource "cloudflare_record" "juice" {
   type    = "NS"
   value   = each.key
   ttl     = 1
+
+  depends_on = [
+    azurerm_dns_zone.juice
+  ]
 }
