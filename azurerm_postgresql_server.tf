@@ -11,7 +11,7 @@ resource "azurerm_postgresql_server" "juice" {
   auto_grow_enabled            = false
 
   administrator_login          = "psqladmin"
-  administrator_login_password = random_password.postgres_server_admin_password.id
+  administrator_login_password = random_password.postgres_server_admin_password.result
   version                      = "11"
   ssl_enforcement_enabled      = true
 }
